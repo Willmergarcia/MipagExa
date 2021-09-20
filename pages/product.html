@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/popper.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/sweetalert2.min.css">
+    <link type="text/css" rel="stylesheet" href="../css/style.css" />
+    <title>Carrito Compras</title>
+</head>
+
+<body>
+    <input type="checkbox" class="menu__checkbox" id="open">
+    <header class="header">
+        <div class="u-wrapper">
+            <div class="header__content">
+                <a href="./index.html" class="header__logo"></a>
+                <label for="open" class="menu-open"></label>
+                <nav class="navbar">
+                    <div class="u-wrapper">
+                        <ul class="navbar__menu">
+                            <li class="navbar__menu--items"><a href="../index.html">Inicio</a></li>
+                            <li class="navbar__menu--items"><a href="product.html">Productos</a>
+                            </li>
+                            <li id="opcadminp" class="navbar__menu--items"><a  href="productos.html"> Administracion
+                                    Productos</a></li>
+
+                            <li id="opcadminc" class="navbar__menu--items"><a  href="compras.html">Compras</a>
+                            </li>
+                            <li id="loginopc" class="navbar__menu--items"><a  href="login.html" >Iniciar Sesion</a></li>
+                            <li id="logoutopc"  class="navbar__menu--items"><a onclick="cerrarSesion()">Cerrar Sesion</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div>
+                <h1 class="nommal-text bold">Lista de Productos</h1>
+                <h4 class="nommal-text">Selecciona uno de nuestros productos y realiza una Compra</h4>
+                <br/>
+            </div>
+            <div class="row" id="list-productos">
+                
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/sweetalert2.min.js"></script>
+    <script src="../js/productosClient.js"></script>
+    <footer class="footer">
+        <div class="u-wrapper">
+            <div class="footer-contendio">
+                <p class="footer-direccion">6ta Avenida Zona 1 Guatatemala</p>
+                <p class="footer__copy">© 2021 LA BARARA. Derechos reservados</p>
+                <div class="footer__actions">
+                    <input type="email" class="u-input footer__actions--email"
+                        placeholder="Ingresa tu correo electronico">
+                    <button type="submit" class="footer__actions--button">Contactanos</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/sesion.js"></script>
+</body>
+</html>

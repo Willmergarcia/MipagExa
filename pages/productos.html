@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/popper.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/sweetalert2.min.css">
+    <link type="text/css" rel="stylesheet" href="../css/style.css" />
+    <title>Carrito Compras</title>
+</head>
+
+<body>
+    <input type="checkbox" class="menu__checkbox" id="open">
+    <header class="header">
+        <div class="u-wrapper">
+            <div class="header__content">
+                <a href="./index.html" class="header__logo"></a>
+                <label for="open" class="menu-open"></label>
+                <nav class="navbar">
+                    <div class="u-wrapper">
+                        <ul class="navbar__menu">
+                            <li class="navbar__menu--items"><a href="../index.html">Inicio</a></li>
+                            <li class="navbar__menu--items"><a href="product.html">Productos</a>
+                            </li>
+                            <li id="opcadminp" class="navbar__menu--items"><a  href="productos.html"> Administracion
+                                    Productos</a></li>
+
+                            <li id="opcadminc" class="navbar__menu--items"><a  href="compras.html">Compras</a>
+                            </li>
+                            <li id="loginopc" class="navbar__menu--items"><a  href="login.html" >Iniciar Sesion</a></li>
+                            <li id="logoutopc"  class="navbar__menu--items"><a onclick="cerrarSesion()">Cerrar Sesion</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div>
+                <h1 class="nommal-text bold">Administracion de Productos</h1>
+                <h6 class="nommal-text">Agrega o Elimina Productos</h6>
+                <br/>
+            </div>
+            <div class="row">
+              <input type="hidden" id="id" class="form-control">
+                <div class="col-md-8">
+                  <label>Nombre</label>
+                  <input type="text" id="nombre" class="form-control">
+                </div>
+                <div class="col-md-4">
+                  <label>Precio</label>
+                  <input type="number" id="precio" class="form-control">
+                </div>
+                <div class="col-md-4">
+                  <label>Cantidad Inicial</label>
+                  <input type="number" id="cantidad" class="form-control">
+                </div>
+                <div class="col-md-4">
+                  <label>Imagen Articulo</label>
+                  <input type="file" id="file" class="form-control" accept="image/png, image/jpeg">
+                  
+                </div>
+                <div class="col-md-4">
+                  <label><br/></label>
+                  <button class="btn  btn-info btn-block" onclick="agregarProducto()">AGREGAR</button>
+                </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <br/>
+                <h6 class="normal-text">Lista Articulos</h4>
+              </div>
+              <div class="col-md-12" style="height: 500px;">
+                <table class="table table-bordered">
+                  <thead class="thead-dark">
+                    <tr>
+                      <th>#NO</th>
+                      <th>NOMBRE</th>
+                      <th>PRECIO</th>
+                      <th>CANTIDAD</th>
+                      <th>IMG</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody id="list-productos">
+
+                  </tbody>
+                </table>
+              </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/sweetalert2.min.js"></script>
+    <script src="../js/productoadmin.js"></script>
+    <footer class="footer">
+        <div class="u-wrapper">
+            <div class="footer-contendio">
+                <p class="footer-direccion">6ta Avenida Zona 1 Guatatemala</p>
+                <p class="footer__copy">© 2021 LA BARARA. Derechos reservados</p>
+                <div class="footer__actions">
+                    <input type="email" class="u-input footer__actions--email"
+                        placeholder="Ingresa tu correo electronico">
+                    <button type="submit" class="footer__actions--button">Contactanos</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/sesion.js"></script>
+</body>
+</html>
